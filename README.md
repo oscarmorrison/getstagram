@@ -5,10 +5,10 @@ public api for instagram
 **Get**  
 Request  
 
-    https://getstagram.herokuapp.com/tag/:tag
+    http://getstagram.herokuapp.com/tag/:tag
     
 *example*
-    https://getstagram.heroku.com/tag/instadaily
+    http://getstagram.heroku.com/tag/instadaily
     
 Response
 ```
