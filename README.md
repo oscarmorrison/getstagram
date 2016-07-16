@@ -1,6 +1,9 @@
 # getstagram
 public api for instagram
 
+**_Disclaimer_**  
+_getstagram is an expirimental API, and is not to be consumed for public or commercial use. getstagram is in no way affiliated with instagram, facebook or any other related entities._
+
 ## Endpoints
 **Get**  
 Request  
