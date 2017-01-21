@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/oscarmorrison/getstagram",
   "dependencies": {
+    "apicache": "^0.8.1",
     "cheerio": "^0.20.0",
     "express": "^4.14.0",
     "lodash": "^4.13.1",

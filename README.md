@@ -29,7 +29,8 @@ Response
             },
             thumbnail_src: string,
             is_video: bool,
-            display_src: string
+            display_src: string,
+            link: string
         }
     ]
 }
