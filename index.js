@@ -72,6 +72,7 @@ function getTag(tag, res) {
                 'shortcode',
             ])
             newEntry.likes = entry.node.edge_liked_by && entry.node.edge_liked_by.count;
+            newEntry.caption = entry.node.edge_media_to_caption.edges[0].node.text
             newEntry.link = 'https://www.instagram.com/p/'+newEntry.shortcode;
             delete newEntry.shortCode;
             return newEntry;
