@@ -25,6 +25,7 @@ app.get('/tag/:tag', function(req, res){
 });
 
 app.get('/', function (req, res){
+    console.log('ping');
     res.send({  response: 'Pinging from Getstagram API' });
 });
 
@@ -58,22 +59,22 @@ function getTag(tag, res) {
 	});
 
 	function cleanData(data){
-		data = _.pick(data, 'entry_data').entry_data.TagPage[0].tag.media.nodes;
+        data = data.entry_data.TagPage[0].graphql.hashtag.edge_hashtag_to_media.edges;
         return data.map( entry => {
-            entry = _.pick(entry, [
-                'code',
+            newEntry = _.pick(entry.node, [
                 'date',
                 'caption',
                 'dimensions',
                 'caption',
-                'likes',
                 'thumbnail_src',
                 'is_video',
-                'display_src'
+                'display_url',
+                'shortcode',
             ])
-            entry.link = 'https://www.instagram.com/p/'+entry.code;
-            delete entry.code;
-            return entry;
+            newEntry.likes = entry.node.edge_liked_by && entry.node.edge_liked_by.count;
+            newEntry.link = 'https://www.instagram.com/p/'+newEntry.shortcode;
+            delete newEntry.shortCode;
+            return newEntry;
         });
 	}
 }
