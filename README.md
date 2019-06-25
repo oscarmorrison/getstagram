@@ -6,12 +6,12 @@ _getstagram is an expirimental API, and is not to be consumed for public or comm
 
 ## Endpoints
 **Get**  
-Request  
+Tag images Request  
 
     http://getstagram.herokuapp.com/tag/:tag
 
 **Get**  
-Request  
+User profile images Request  
 
     http://getstagram.herokuapp.com/user/:username
     
