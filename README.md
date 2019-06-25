@@ -9,6 +9,12 @@ _getstagram is an expirimental API, and is not to be consumed for public or comm
 Request  
 
     http://getstagram.herokuapp.com/tag/:tag
+
+**Get**  
+Request  
+
+    http://getstagram.herokuapp.com/user/:username
+    
     
 *example*
     http://getstagram.heroku.com/tag/instadaily
